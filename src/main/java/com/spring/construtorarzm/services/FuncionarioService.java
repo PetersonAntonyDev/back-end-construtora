@@ -42,6 +42,9 @@ public class FuncionarioService {
             funcionarioBd.setCpf(funcionario.getCpf());
             funcionarioBd.setEspecialidade(funcionario.getEspecialidade());
             funcionarioBd.setUrlAvatar(funcionario.getUrlAvatar());
+            funcionarioBd.setUrlAvatar(funcionario.getCep());
+            funcionarioBd.setUrlAvatar(funcionario.getLogradouro());
+            funcionarioBd.setUrlAvatar(funcionario.getUf());
             return funcionarioBd;
         }).orElseThrow());
         return funcionario;

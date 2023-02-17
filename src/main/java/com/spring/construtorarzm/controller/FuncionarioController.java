@@ -19,6 +19,7 @@ public class FuncionarioController {
 
     @GetMapping()
     public List<Funcionario> getAllFuncionario(){
+
         return (List<Funcionario>) service.getFuncionarios();
     }
 

@@ -40,5 +40,14 @@ public class Funcionario {
     @Column(length = 150, nullable = false)
     private String urlAvatar;
 
+    @Column(length = 150, nullable = false)
+    private String cep;
+
+    @Column(length = 150, nullable = false)
+    private String logradouro;
+
+    @Column(length = 150, nullable = false)
+    private String uf;
+
 
 }
