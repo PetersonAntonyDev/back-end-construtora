@@ -38,9 +38,6 @@ public class Funcionario {
     private String especialidade;
 
     @Column(length = 150, nullable = false)
-    private String urlAvatar;
-
-    @Column(length = 150, nullable = false)
     private String cep;
 
     @Column(length = 150, nullable = false)

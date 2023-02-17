@@ -14,22 +14,27 @@ public class FuncionarioService {
 
 
     public List<Funcionario> getFuncionarios(){
+
         return repository.findAll();
     }
 
     public Funcionario getFuncionarioById(Long id){
+
         return repository.findById(id).orElseThrow();
     }
 
     public Funcionario addFuncionario(Funcionario funcionario){
+
         return repository.save(funcionario);
     }
 
     public Funcionario addFuncionarioById(Long id){
+
         return repository.findById(id).orElseThrow();
     }
 
     public void deleteFuncionario(Long id){
+
         repository.delete(repository.findById(id).orElseThrow());
     }
 
@@ -41,10 +46,9 @@ public class FuncionarioService {
             funcionarioBd.setTelefone(funcionario.getTelefone());
             funcionarioBd.setCpf(funcionario.getCpf());
             funcionarioBd.setEspecialidade(funcionario.getEspecialidade());
-            funcionarioBd.setUrlAvatar(funcionario.getUrlAvatar());
-            funcionarioBd.setUrlAvatar(funcionario.getCep());
-            funcionarioBd.setUrlAvatar(funcionario.getLogradouro());
-            funcionarioBd.setUrlAvatar(funcionario.getUf());
+            funcionarioBd.setCep(funcionario.getCep());
+            funcionarioBd.setLogradouro(funcionario.getLogradouro());
+            funcionarioBd.setUf(funcionario.getUf());
             return funcionarioBd;
         }).orElseThrow());
         return funcionario;

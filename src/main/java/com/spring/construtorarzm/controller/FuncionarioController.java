@@ -28,7 +28,7 @@ public class FuncionarioController {
         return service.getFuncionarioById(id);
     }
 
-    @PostMapping
+    @PostMapping("/post")
     public Funcionario addFuncionario(@Validated @RequestBody Funcionario funcionario){
         return service.addFuncionario(funcionario);
     }
